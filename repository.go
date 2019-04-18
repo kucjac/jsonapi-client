@@ -5,11 +5,11 @@ import (
 	"compress/gzip"
 	"encoding/json"
 	"fmt"
-	"github.com/kucjac/jsonapi/controller"
-	"github.com/kucjac/jsonapi/encoding/jsonapi"
-	"github.com/kucjac/jsonapi/errors"
-	"github.com/kucjac/jsonapi/log"
-	"github.com/kucjac/jsonapi/query/scope"
+	"github.com/neuronlabs/neuron/controller"
+	"github.com/neuronlabs/neuron/encoding/jsonapi"
+	"github.com/neuronlabs/neuron/errors"
+	"github.com/neuronlabs/neuron/log"
+	"github.com/neuronlabs/neuron/query/scope"
 	"gopkg.in/go-playground/validator.v9"
 	"io"
 	"net/http"
@@ -19,7 +19,7 @@ import (
 
 var validate = validator.New()
 
-// Repository is the http.Client that implements jsonapi.Repository
+// Repository is the http.Client that implements neuron.Repository
 // allowing to query different jsonapi server.
 type Repository struct {
 	Config *Config
@@ -174,7 +174,7 @@ func (r *Repository) do(
 
 func (r *Repository) formatRequest(req *http.Request) error {
 	// Add all headers
-	req.Header.Add("User-Agent", "Golang JSONAPI Client - github.com/kucjac/jsonapi-client")
+	req.Header.Add("User-Agent", "Golang JSONAPI Client - github.com/neuronlabs/neuron-client")
 	req.Header.Add("Accept", "application/vnd.api+json")
 	req.Header.Add("Accept-Encoding", "gzip,deflate")
 	req.Header.Add("Connection", "keep-alive")

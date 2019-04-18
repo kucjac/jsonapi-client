@@ -1,13 +1,13 @@
 package client
 
 import (
-	"github.com/kucjac/jsonapi/encoding/jsonapi"
-	"github.com/kucjac/jsonapi/query/scope"
+	"github.com/neuronlabs/neuron/encoding/jsonapi"
+	"github.com/neuronlabs/neuron/query/scope"
 	"io"
 	"strings"
 )
 
-// List implements the jsonapi repository.Lister
+// List implements the neuron repository.Lister
 func (r *Repository) List(s *scope.Scope) error {
 
 	sb := &strings.Builder{}

@@ -2,8 +2,8 @@ package client
 
 import (
 	"errors"
-	"github.com/kucjac/jsonapi/encoding/jsonapi"
-	"github.com/kucjac/jsonapi/query/scope"
+	"github.com/neuronlabs/neuron/encoding/jsonapi"
+	"github.com/neuronlabs/neuron/query/scope"
 	"io"
 	"strings"
 )

@@ -1,12 +1,12 @@
 package client
 
 import (
-	"github.com/kucjac/jsonapi/query/scope"
+	"github.com/neuronlabs/neuron/query/scope"
 	"io"
 	"strings"
 )
 
-// Delete implements jsonapi repository.Deleter interface
+// Delete implements neuron repository.Deleter interface
 func (r *Repository) Delete(s *scope.Scope) error {
 	primID, err := r.getPrimID(s)
 	if err != nil {

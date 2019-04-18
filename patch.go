@@ -2,14 +2,14 @@ package client
 
 import (
 	"bytes"
-	"github.com/kucjac/jsonapi/encoding/jsonapi"
-	"github.com/kucjac/jsonapi/query/scope"
+	"github.com/neuronlabs/neuron/encoding/jsonapi"
+	"github.com/neuronlabs/neuron/query/scope"
 	"io"
 	"net/http"
 	"strings"
 )
 
-// Patch implements the jsonapi repository.Patcher interface
+// Patch implements the neuron repository.Patcher interface
 func (r *Repository) Patch(s *scope.Scope) error {
 
 	primID, err := r.getPrimID(s)

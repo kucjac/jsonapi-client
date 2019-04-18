@@ -2,13 +2,13 @@ package client
 
 import (
 	"bytes"
-	"github.com/kucjac/jsonapi/encoding/jsonapi"
-	"github.com/kucjac/jsonapi/query/scope"
+	"github.com/neuronlabs/neuron/encoding/jsonapi"
+	"github.com/neuronlabs/neuron/query/scope"
 	"io"
 	"strings"
 )
 
-// Create implements the jsonapi repository.Creator interface
+// Create implements the neuron repository.Creator interface
 func (r *Repository) Create(s *scope.Scope) error {
 	b := &bytes.Buffer{}
 
