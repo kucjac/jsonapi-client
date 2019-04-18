@@ -1,2 +1,2 @@
-# jsonapi-client
-This repository contains the 'github.com/kucjac/jsonapi' repository that allows to query as a client
+# Neuron jsonapi-client
+This repository contains the 'github.com/neuronlabs/neuron' repository that allows to query as a client
